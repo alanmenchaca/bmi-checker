@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+https://www.ramsayhealth.co.uk/treatments/weight-loss-surgery/bmi/bmi-formula#:~:text=The%20imperial%20BMI%20formula%20is,a%20conversion%20factor%20of%20703.
+TODO:
+   - search icon for the tab app tab.
+*/
+
+@layer base {
+    @font-face {
+        font-family: 'recolecta-regulat';
+        src: url("../assets/fonts/recoleta-regular.woff2") format('woff2');
+    }
+}
+
+@layer components {
+    /** {*/
+    /*    @apply border border-red-500;*/
+    /*}*/
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: recolecta-regulat, Avenir, -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* Balanced Lifestyle Essentials Cards */
+    .ble-info-cards {
+        @apply grid grid-rows-3 md:grid-rows-1 md:grid-cols-3
+        bg-gradient-to-tr from-secondary-accent-purple text-center rounded-2xl
+        gap-5 md:gap-14
+        p-5 md:py-16 md:px-8;
+    }
+
+    .ble-info-cards .info-card {
+        @apply flex flex-col items-center
+        w-full sm:w-[300px] md:w-full gap-3;
+    }
+
+    .info-card .info-card-title {
+        @apply text-secondary-purple bg-[#DECAE8] rounded-full px-5 py-1;
+    }
+
+    .info-card .info-card-icon {
+        @apply size-10;
+    }
+
+    .info-card .info-card-text {
+        @apply text-gray-500 text-sm;
+    }
+
+    /* Limitations of BMI Cards */
+    .limitations-bmi-cards {
+        @apply grid grid-cols-10 grid-rows-3 gap-10;
+    }
+
+    .limitations-bmi-cards .limitation-card {
+        @apply bg-pale-sand shadow-2xl shadow-driftwood rounded-2xl p-6;
+    }
+
+    .limitation-card > div {
+        @apply flex items-center gap-2 w-fit rounded-xl px-3 py-2 mb-2
+        bg-desert-sand text-driftwood;
+    }
+
+    .limitation-card .limitation-card-icon {
+        @apply w-7 bg-driftwood rounded-full
+    }
+
+    .limitation-card .limitation-card-title {
+        @apply text-lg;
+    }
+
+    .limitation-card .limitation-card-text {
+        @apply text-gray-500;
+    }
+}

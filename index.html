@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <!--<link rel="icon" type="image/svg+xml" href="/vite.svg"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./src/css/index.css"/>
+    <title>BMI Checker</title>
+</head>
+<body class="flex justify-center bg-pale-sand">
+    <div id="container"
+         class="flex flex-col max-w-screen-xl
+         gap-20 md:gap-24 lg:gap-28 xl:gap-36
+         m-[3%] md:m-[5%] lg:m-[6%] xl:my-[80px]">
+        <section
+                class="flex flex-col lg:flex-row items-center
+                gap-3 md:gap-6 lg:gap-8">
+            <div class="flex flex-col justify-between h-full">
+                <div class="flex flex-col gap-1">
+                    <h1 class="main-text text-dark-green tracking-tight leading-[3.5rem]
+                    text-6xl lg:text-7xl xl:text-8xl">
+                        Track your BMI for a Healthier You
+                    </h1>
+                    <p class="main-text text-dark-green leading-[1.3rem] xl:text-xl lg:mb-5">
+                        Monitor Your Body's Changes and Stay Fit with Ease
+                    </p>
+                    <div>
+                        <button id="cta-btn" class="rounded-2xl bg-medium-green text-dark-green text-sm p-3">
+                            Measure Now!
+                        </button>
+                    </div>
+                </div>
+                <p id="info-text" class="hidden text-gray-500 text-xs lg:block">
+                    Keep a close eye on your body mass index (BMI) – a key measure of your overall health and wellness.
+                </p>
+            </div>
+            <div class="relative flex items-center">
+                <figure id="main-img">
+                    <img src="./src/assets/img/stethoscope-tiny.jpg" alt="stethoscope"
+                         class="rounded-2xl md:w-[600px] lg:w-[1300px]">
+                </figure>
+                <div id="arrow-text-circle" class="absolute hidden lg:block -translate-x-8">
+                    <svg width="150px" height="150px" viewBox="0 0 100 100" id="text-circle"
+                         class="absolute fill-gray-500 tracking-widest size-[140px] xl:size-[170px]">
+                        <defs>
+                            <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text font-size="10">
+                            <textPath xlink:href="#circle">SEE YOUR INDEX • SEE YOUR INDEX •</textPath>
+                        </text>
+                    </svg>
+                    <div class="absolute flex flex-col justify-center items-center size-[140px] xl:size-[170px]">
+                        <svg width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 24 24" stroke-width="0.7"
+                             stroke="currentColor" class="text-gray-500 size-14">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+                class="calculator-section
+                grid grid-cols-1 lg:grid-cols-2 justify-items-center place-items-center
+                relative bg-gradient-to-tr from-medium-green rounded-2xl
+                lg:bg-none gap-5 md:gap-3 lg:gap-14 xl:gap-10
+                p-4 sm:p-8 lg:px-5 lg:py-16 xl:p-24">
+            <div class="calculator-section
+            absolute hidden lg:block w-9/12 h-full right-0 rounded-2xl bg-gradient-to-tr from-medium-green"></div>
+            <div class="calculator-section relative lg:order-2">
+                <h2 class="text-dark-green text-3xl lg:text-5xl mb-5 lg:mb-10">Body Mass Index Calculator</h2>
+                <p class="text-gray-500 text-xs lg:text-base xl:text-lg mb-3">
+                    Gain insight into your weight relative to your height with our body mass index (BMI) calculator.
+                    <br><br>
+                    Though BMI is not the only determinant of a healthy weight, it provides a useful baseline for
+                    assessing
+                    your general health and wellness.
+                </p>
+            </div>
+            <div id="bmi-calculator"></div>
+        </section>
+        <article
+                class="result-means-section
+                relative bg-gradient-to-tr from-secondary-accent-blue rounded-2xl
+                flex flex-col md:flex-row justify-center items-center
+                md:bg-none gap-5 md:gap-10 lg:gap-8 xl:gap-10
+                p-4 sm:p-8 md:p-16 lg:px-8 lg:py-16 xl:p-24">
+            <div class="result-means-section
+            absolute hidden md:block w-9/12 h-full left-0 rounded-2xl bg-gradient-to-tl from-secondary-accent-blue"></div>
+            <div class="result-means-section w-11/12 md:w-7/12">
+                <h2 class="relative text-secondary-blue text-3xl lg:text-5xl mb-5 md:mb-8 lg:mb-10">
+                    What your BMI result means
+                </h2>
+                <p class="relative text-gray-500 text-xs lg:text-base xl:text-lg mb-3">
+                    A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower
+                    your chances of experiencing health issues later on, such as obesity and type 2 diabetes.
+                    <br><br>
+                    Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and
+                    vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for
+                    five days a week. Better understand your weight in relation to your height using our body mass index
+                    (BM) calculator.
+                </p>
+            </div>
+            <figure>
+                <img id="measure-tape-img"
+                     src="./src/assets/img/measure-tape-tiny.jpg" alt="measure-tape"
+                     class="relative rounded-2xl w-[300px] md:w-[500px]">
+            </figure>
+        </article>
+        <section>
+            <div>
+                <div class="flex flex-col items-center text-center">
+                    <h2 class="text-secondary-purple text-3xl lg:text-5xl mb-5 lg:mb-7">Balanced Lifestyle
+                        Essentials</h2>
+                    <p class="text-sm lg:text-xl mb-8 text-gray-500 lg:w-10/12">
+                        Embrace nutritious eating, regular exercise, and adequate sleep to achieve optimal wellness,
+                        maintain weight, and enhance overall quality of life.
+                    </p>
+                </div>
+                <div class="ble-info-cards">
+                    <article class="info-card">
+                        <img src="./src/assets/svg/smile.svg" alt="smile" class="info-card-icon">
+                        <span class="info-card-title">Healthy Eating</span>
+                        <p class="info-card-text">
+                            Healthy eating promotes weight control, disease prevention, better digestion, immunity,
+                            mental clarity, and mood.
+                        </p>
+                    </article>
+                    <article class="info-card">
+                        <img src="./src/assets/svg/basketball.svg" alt="basketball" class="info-card-icon">
+                        <span class="info-card-title">Regular Exercise</span>
+                        <p class="info-card-text">
+                            Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk,
+                            fostering wellness and longevity.
+                        </p>
+                    </article>
+                    <article class="info-card">
+                        <img src="./src/assets/svg/moon.svg" alt="moon" class="info-card-icon">
+                        <span class="info-card-title">Adequate Sleep</span>
+                        <p class="info-card-text">
+                            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall
+                            restoration and rejuvenation.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="relative flex flex-row-reverse">
+            <div class="absolute w-6/12 float-end text-left">
+                <h2 class="text-driftwood text-3xl lg:text-5xl mb-5 lg:mb-7">Limitations of BMI</h2>
+                <p class="text-sm lg:text-base mb-8 text-gray-500">
+                    Although BMI is often a practical indicator of healthy weight, it is not suited for every person.
+                    Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement
+                    may not be beneficial to use.
+                </p>
+            </div>
+            <div class="limitations-bmi-cards grid grid-cols-10 grid-rows-3 gap-8">
+                <article class="limitation-card col-start-2 col-span-3">
+                    <div>
+                        <figure class="limitation-card-icon">
+                            <img alt="gender-intersex" src="./src/assets/svg/bmi-limitations/gender-intersex.svg"/>
+                        </figure>
+                        <h3 class="limitation-card-title">Gender</h3>
+                    </div>
+                    <p class="limitation-card-text">
+                        The development and body fat composition of girls and boys vary with age. Consequently, a
+                        child's age and gender are considered when evaluating their BMI.
+                    </p>
+                </article>
+                <article class="limitation-card row-start-2 col-start-1 col-span-3">
+                    <div>
+                        <figure class="limitation-card-icon">
+                            <img alt="age" src="./src/assets/svg/bmi-limitations/cake-fill.svg"/>
+                        </figure>
+                        <h3 class="limitation-card-title">Age</h3>
+                    </div>
+                    <p class="limitation-card-text">
+                        In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+                        body fat content.
+                    </p>
+                </article>
+                <article class="limitation-card row-start-2 col-start-4 col-span-3">
+                    <div>
+                        <figure class="limitation-card-icon">
+                            <img alt="arm-flex" src="./src/assets/svg/bmi-limitations/arm-flex.svg"/>
+                        </figure>
+                        <h3 class="limitation-card-title">Muscle</h3>
+                    </div>
+                    <p class="limitation-card-text">
+                        BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate
+                        muscle from fat.
+                    </p>
+                </article>
+                <article class="limitation-card row-start-3 col-start-3 col-span-3">
+                    <div>
+                        <figure class="limitation-card-icon">
+                            <img alt="baby-line" src="./src/assets/svg/bmi-limitations/baby-line.svg"/>
+                        </figure>
+                        <h3 class="limitation-card-title">Pregnancy</h3>
+                    </div>
+                    <p class="limitation-card-text">
+                        Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy
+                        pre-pregnancy BMI is advisable to minimise health risks for both mother and child.
+                    </p>
+                </article>
+                <article class="limitation-card row-start-3 col-start-6 col-span-3">
+                    <div>
+                        <figure class="limitation-card-icon">
+                            <img alt="race" src="./src/assets/svg/bmi-limitations/race.svg"/>
+                        </figure>
+                        <h3 class="limitation-card-title">Race</h3>
+                    </div>
+                    <p class="limitation-card-text">
+                        Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs
+                        than others. To learn more, it is advised to discuss this with your GP or practice nurse.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="./src/main.jsx"></script>
+    <script type="module" src="./src/utils/animations.js"></script>
+</body>
+</html>
