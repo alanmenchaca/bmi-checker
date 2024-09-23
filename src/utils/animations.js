@@ -6,16 +6,16 @@ gsap.registerPlugin(ScrollTrigger);
 // ###################################################################
 
 gsap.timeline({
-    defaults: {ease: 'power1.out', opacity: 0, y: 20, duration: 0.2},
+    defaults: {ease: 'power1.out', opacity: 0, y: 20},
 })
     .from('.main-text', {})
     .from('#cta-btn', {})
     .from('#info-text', {})
-    .from('#main-img', {scale: 0.85, duration: 0.2}, '-=0.5')
+    .from('#main-img', {scale: 0.85}, '-=0.5')
     .from('#arrow-text-circle', {})
     .to('#text-circle', {
-        ease: 'none', opacity: 1, y: 0, duration: 50,
-        rotation: 360, repeat: -1,
+        ease: 'none', opacity: 1, y: 0,
+        rotation: 360, repeat: -1, duration: 50,
     }, '+=0.2');
 
 // ###################################################################
@@ -28,7 +28,7 @@ function loadTimeLineDefaultSetting(trigger) {
     }
 
     return {
-        defaults: {ease: 'power1.out', opacity: 0, y: 20, duration: 0.5},
+        defaults: {ease: 'power1.out', opacity: 0, y: 20},
         scrollTrigger: scrollTriggerDefaultSetting
     }
 }
@@ -42,3 +42,7 @@ gsap.timeline(loadTimeLineDefaultSetting('.calculator-section'))
 gsap.timeline(loadTimeLineDefaultSetting('.result-means-section'))
     .from('.result-means-section', {})
     .from('#measure-tape-img', {scale: 0.9, duration: 0.2});
+
+// gsap.timeline(loadTimeLineDefaultSetting('.result-means-section'))
+//     .from('.result-means-section', {})
+//     .from('#measure-tape-img', {scale: 0.9, duration: 0.2});

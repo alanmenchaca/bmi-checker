@@ -4,8 +4,6 @@
 
 /*
 https://www.ramsayhealth.co.uk/treatments/weight-loss-surgery/bmi/bmi-formula#:~:text=The%20imperial%20BMI%20formula%20is,a%20conversion%20factor%20of%20703.
-TODO:
-   - search icon for the tab app tab.
 */
 
 @layer base {
@@ -30,8 +28,8 @@ TODO:
 
     /* Balanced Lifestyle Essentials Cards */
     .ble-info-cards {
-        @apply grid grid-rows-3 md:grid-rows-1 md:grid-cols-3
-        bg-gradient-to-tr from-secondary-accent-purple text-center rounded-2xl
+        @apply bg-gradient-to-tr from-secondary-accent-purple text-center rounded-2xl
+        grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 place-items-center
         gap-5 md:gap-14
         p-5 md:py-16 md:px-8;
     }
@@ -55,7 +53,10 @@ TODO:
 
     /* Limitations of BMI Cards */
     .limitations-bmi-cards {
-        @apply grid grid-cols-10 grid-rows-3 gap-10;
+        @apply
+        flex flex-col gap-5
+        sm:grid sm:grid-cols-4 sm:gap-5
+        lg:grid-cols-10 grid-rows-3 lg:gap-10;
     }
 
     .limitations-bmi-cards .limitation-card {
@@ -76,6 +77,6 @@ TODO:
     }
 
     .limitation-card .limitation-card-text {
-        @apply text-gray-500;
+        @apply text-gray-500 text-sm md:text-base;
     }
 }
