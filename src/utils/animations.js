@@ -4,7 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.timeline({
-    defaults: {ease: 'power1.out', opacity: 0, y: 20},
+    defaults: {ease: 'power1.out', opacity: 0, y: 50},
 })
     .from('.main-text', {})
     .from('#cta-btn', {})
