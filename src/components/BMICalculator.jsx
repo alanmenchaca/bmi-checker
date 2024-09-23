@@ -76,7 +76,6 @@ export default function BMICalculator() {
                 <p>BMI: {bmiData.bmi}</p>
                 <p>BMI Category: {bmiData.bmiCategory}</p>
                 <p>Ideal Weight: {bmiData.idealWeight.min} - {bmiData.idealWeight.max}</p>*/}
-                {/*#######################################*/}
                 {(userData.weight && userData.height) > 0 && (
                     <div className="flex flex-col lg:flex-row gap-3">
                         <div className="font-bold lg:w-1/2">

@@ -17,9 +17,9 @@ https://www.ramsayhealth.co.uk/treatments/weight-loss-surgery/bmi/bmi-formula#:~
     /** {*/
     /*    @apply border border-red-500;*/
     /*}*/
-    html {
-        scroll-behavior: smooth;
-    }
+    /*html {*/
+    /*    scroll-behavior: smooth;*/
+    /*}*/
 
     body {
         font-family: recolecta-regulat, Avenir, -apple-system, BlinkMacSystemFont,
