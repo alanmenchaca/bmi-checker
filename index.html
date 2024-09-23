@@ -60,15 +60,13 @@
                 </div>
             </div>
         </section>
-        <section
-                class="calculator-section
-                grid grid-cols-1 lg:grid-cols-2 justify-items-center place-items-center
+        <section id="calculator-section"
+                 class="grid grid-cols-1 lg:grid-cols-2 justify-items-center place-items-center
                 relative bg-gradient-to-tr from-medium-green rounded-2xl
                 lg:bg-none gap-5 md:gap-3 lg:gap-14 xl:gap-10
                 p-4 sm:p-8 lg:px-5 lg:py-16 xl:p-24">
-            <div class="calculator-section
-            absolute hidden lg:block w-9/12 h-full right-0 rounded-2xl bg-gradient-to-tr from-medium-green"></div>
-            <div class="calculator-section relative lg:order-2">
+            <div class="absolute hidden lg:block w-9/12 h-full right-0 rounded-2xl bg-gradient-to-tr from-medium-green"></div>
+            <div class="relative lg:order-2">
                 <h2 class="text-dark-green text-3xl lg:text-5xl mb-5 lg:mb-10">Body Mass Index Calculator</h2>
                 <p class="text-gray-500 text-xs lg:text-base xl:text-lg mb-3">
                     Gain insight into your weight relative to your height with our body mass index (BMI) calculator.
@@ -80,15 +78,13 @@
             </div>
             <div id="bmi-calculator"></div>
         </section>
-        <article
-                class="result-means-section
-                relative bg-gradient-to-tr from-secondary-accent-blue rounded-2xl
+        <article id="result-means-section"
+                 class="relative bg-gradient-to-tr from-secondary-accent-blue rounded-2xl
                 flex flex-col md:flex-row justify-center items-center
                 md:bg-none gap-5 md:gap-10 lg:gap-8 xl:gap-10
                 p-4 sm:p-8 md:p-16 lg:px-8 lg:py-16 xl:p-24">
-            <div class="result-means-section
-            absolute hidden md:block w-9/12 h-full left-0 rounded-2xl bg-gradient-to-tl from-secondary-accent-blue"></div>
-            <div class="result-means-section w-11/12 md:w-7/12">
+            <div class="absolute hidden md:block w-9/12 h-full left-0 rounded-2xl bg-gradient-to-tl from-secondary-accent-blue"></div>
+            <div class="w-11/12 md:w-7/12">
                 <h2 class="relative text-secondary-blue text-3xl lg:text-5xl mb-5 md:mb-8 lg:mb-10">
                     What your BMI result means
                 </h2>
@@ -108,46 +104,46 @@
                      class="relative rounded-2xl w-[300px] md:w-[500px]">
             </figure>
         </article>
-        <section>
-            <div>
-                <div class="flex flex-col items-center text-center">
-                    <h2 class="text-secondary-purple text-3xl lg:text-5xl mb-5 lg:mb-7">Balanced Lifestyle
-                        Essentials</h2>
-                    <p class="text-sm lg:text-xl mb-8 text-gray-500 lg:w-10/12">
-                        Embrace nutritious eating, regular exercise, and adequate sleep to achieve optimal wellness,
-                        maintain weight, and enhance overall quality of life.
+        <section id="ble-section">
+            <div class="flex flex-col items-center text-center">
+                <h2 class="text-secondary-purple text-3xl lg:text-5xl mb-5 lg:mb-7">Balanced Lifestyle
+                    Essentials</h2>
+                <p class="text-sm lg:text-xl mb-8 text-gray-500 lg:w-10/12">
+                    Embrace nutritious eating, regular exercise, and adequate sleep to achieve optimal wellness,
+                    maintain weight, and enhance overall quality of life.
+                </p>
+            </div>
+            <div id="ble-info-cards">
+                <article class="info-card">
+                    <img src="./src/assets/svg/smile.svg" alt="smile" class="info-card-icon">
+                    <span class="info-card-title">Healthy Eating</span>
+                    <p class="info-card-text">
+                        Healthy eating promotes weight control, disease prevention, better digestion, immunity,
+                        mental clarity, and mood.
                     </p>
-                </div>
-                <div class="ble-info-cards">
-                    <article class="info-card">
-                        <img src="./src/assets/svg/smile.svg" alt="smile" class="info-card-icon">
-                        <span class="info-card-title">Healthy Eating</span>
-                        <p class="info-card-text">
-                            Healthy eating promotes weight control, disease prevention, better digestion, immunity,
-                            mental clarity, and mood.
-                        </p>
-                    </article>
-                    <article class="info-card">
-                        <img src="./src/assets/svg/basketball.svg" alt="basketball" class="info-card-icon">
-                        <span class="info-card-title">Regular Exercise</span>
-                        <p class="info-card-text">
-                            Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk,
-                            fostering wellness and longevity.
-                        </p>
-                    </article>
-                    <article class="info-card">
-                        <img src="./src/assets/svg/moon.svg" alt="moon" class="info-card-icon">
-                        <span class="info-card-title">Adequate Sleep</span>
-                        <p class="info-card-text">
-                            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall
-                            restoration and rejuvenation.
-                        </p>
-                    </article>
-                </div>
+                </article>
+                <article class="info-card">
+                    <img src="./src/assets/svg/basketball.svg" alt="basketball" class="info-card-icon">
+                    <span class="info-card-title">Regular Exercise</span>
+                    <p class="info-card-text">
+                        Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk,
+                        fostering wellness and longevity.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <img src="./src/assets/svg/moon.svg" alt="moon" class="info-card-icon">
+                    <span class="info-card-title">Adequate Sleep</span>
+                    <p class="info-card-text">
+                        Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall
+                        restoration and rejuvenation.
+                    </p>
+                </article>
             </div>
         </section>
-        <section class="relative flex flex-col lg:flex lg:flex-row-reverse">
-            <div class="relative lg:absolute text-center lg:text-left lg:w-6/12">
+        <section id="bmi-limitations-section"
+                 class="relative flex flex-col lg:flex lg:flex-row-reverse">
+            <div class="relative lg:absolute text-center lg:text-left lg:w-6/12"
+                 id="bmi-limitations-main-text">
                 <h2 class="text-driftwood
                 text-3xl lg:text-5xl mb-5 lg:mb-7">Limitations of BMI</h2>
                 <p class="text-sm lg:text-base mb-8 text-gray-500">
@@ -156,7 +152,7 @@
                     may not be beneficial to use.
                 </p>
             </div>
-            <div class="limitations-bmi-cards">
+            <div class="bmi-limitations-cards">
                 <article class="limitation-card
                 lg:col-start-2 col-span-2 lg:col-span-3">
                     <div>

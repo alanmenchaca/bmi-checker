@@ -3,8 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ###################################################################
-
 gsap.timeline({
     defaults: {ease: 'power1.out', opacity: 0, y: 20},
 })
@@ -20,6 +18,22 @@ gsap.timeline({
 
 // ###################################################################
 
+gsap.timeline(loadTimeLineDefaultSetting('#calculator-section'))
+    .from('#calculator-section', {})
+    .from('#bmi-calculator', {});
+
+gsap.timeline(loadTimeLineDefaultSetting('#result-means-section'))
+    .from('#result-means-section', {})
+    .from('#measure-tape-img', {scale: 0.9});
+
+gsap.timeline(loadTimeLineDefaultSetting('#ble-section'))
+    .from('#ble-section', {})
+    .from('#ble-info-cards', {});
+
+gsap.timeline(loadTimeLineDefaultSetting('#bmi-limitations-section'))
+    .from('#bmi-limitations-main-text', {})
+    .from('.limitation-card', {stagger: 0.2});
+
 function loadTimeLineDefaultSetting(trigger) {
     const scrollTriggerDefaultSetting = {
         trigger: trigger,
@@ -32,17 +46,3 @@ function loadTimeLineDefaultSetting(trigger) {
         scrollTrigger: scrollTriggerDefaultSetting
     }
 }
-
-gsap.timeline(loadTimeLineDefaultSetting('.calculator-section'))
-    .from('.calculator-section', {})
-    .from('#bmi-calculator', {duration: 0.2});
-
-// ###################################################################
-
-gsap.timeline(loadTimeLineDefaultSetting('.result-means-section'))
-    .from('.result-means-section', {})
-    .from('#measure-tape-img', {scale: 0.9, duration: 0.2});
-
-// gsap.timeline(loadTimeLineDefaultSetting('.result-means-section'))
-//     .from('.result-means-section', {})
-//     .from('#measure-tape-img', {scale: 0.9, duration: 0.2});
